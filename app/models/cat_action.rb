@@ -1,0 +1,2 @@
+class CatAction < ApplicationRecord
+end
