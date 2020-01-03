@@ -2,6 +2,7 @@ class Cat < ApplicationRecord
   def play
     self.happy+=5
     self.sleepy+=1
+    self.save
   end
 
 
@@ -20,10 +21,12 @@ class Cat < ApplicationRecord
 
   def naptime
     self.sleepy-=10
+    self.save
   end
 
   def niptime
     self.happy+=10
+    self.save
   end
 
 end
