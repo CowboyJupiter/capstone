@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   # end
   post "/users" => "users#create"
+
+
+  post "/sessions" => "sessions#create"
 end
