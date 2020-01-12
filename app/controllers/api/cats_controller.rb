@@ -53,17 +53,15 @@ class Api::CatsController < ApplicationController
     @cat.water
   end
 
-  def 
+  def niptime
     @cat = current_user.cats[0]
-    @cat.feed
+    @cat.niptime
   end
 
-  def feed
+  def pet_sitter
     @cat = current_user.cats[0]
-    @cat.feed
+    @cat.pet_sitter
   end
-
-
 end
     
 

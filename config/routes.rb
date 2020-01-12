@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   # end
     post "/users" => "users#create"
+    
     post "/cats" => "cats#create"
     patch "/cats/feed" => "cats#feed"
+    patch "/cats/water" => "cats#water"
+    patch "/cats/niptime" => "cats#niptime"
 
 
 

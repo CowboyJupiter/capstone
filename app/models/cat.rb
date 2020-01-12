@@ -1,6 +1,6 @@
 class Cat < ApplicationRecord
   belongs_to :user
-  
+
   def play
     self.happy+=5
     self.sleepy+=1
@@ -16,8 +16,8 @@ class Cat < ApplicationRecord
   end 
 
   def water
-    self.thirsty+=2
-    self.happy+=1
+    self.thirsty+=5
+    self.happy+=5
     self.save
   end
 
@@ -30,5 +30,11 @@ class Cat < ApplicationRecord
     self.happy+=10
     self.save
   end
+  
+  def pet_sitter
+    status false
+    self.happy == 10
 
+    
+  end
 end
