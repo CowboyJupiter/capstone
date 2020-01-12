@@ -1,0 +1,10 @@
+@cats.map do |cat|
+  {
+    id: cat.id,
+    name: cat.name,
+    happy: cat.happy,
+    hangry: cat.hangry,
+    thirsty: cat.thirsty,
+    sleepy: cat.sleepy
+  }
+end
