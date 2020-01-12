@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # end
     post "/users" => "users#create"
     post "/cats" => "cats#create"
+    patch "/cats/feed" => "cats#feed"
 
 
 

@@ -1,4 +1,6 @@
 class Cat < ApplicationRecord
+  belongs_to :user
+  
   def play
     self.happy+=5
     self.sleepy+=1
@@ -7,9 +9,9 @@ class Cat < ApplicationRecord
 
 
   def feed 
-    self.hangry-=2
-    self.happy+=1
-    self.thirsty+=1
+    self.hangry-=5
+    self.happy+=5
+    self.thirsty+=2
     self.save
   end 
 

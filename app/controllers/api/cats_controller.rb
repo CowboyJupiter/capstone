@@ -12,7 +12,8 @@ class Api::CatsController < ApplicationController
       happy: params[:happy],
       hangry: params[:hangry],
       thirsty: params[:thirsty],
-      sleepy: params[:sleepy])
+      sleepy: params[:sleepy]
+    )
     @cat.save
     render 'show.json.jb'
   end
@@ -41,6 +42,28 @@ class Api::CatsController < ApplicationController
     @cat.destroy
     render 'destroy.json.jb'
   end
+
+  def feed
+    @cat = current_user.cats[0]
+    @cat.feed
+  end
+
+  def water
+    @cat = current_user.cats[0]
+    @cat.water
+  end
+
+  def 
+    @cat = current_user.cats[0]
+    @cat.feed
+  end
+
+  def feed
+    @cat = current_user.cats[0]
+    @cat.feed
+  end
+
+
 end
     
 
