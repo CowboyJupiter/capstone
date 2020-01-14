@@ -58,6 +58,11 @@ class Api::CatsController < ApplicationController
     @cat.niptime
   end
 
+  def play
+    @cat = current_user.cats[0]
+    @cat.play
+  end
+
   def pet_sitter
     @cat = current_user.cats[0]
     @cat.pet_sitter

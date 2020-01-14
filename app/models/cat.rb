@@ -2,39 +2,72 @@ class Cat < ApplicationRecord
   belongs_to :user
 
   def play
-    self.happy+=5
-    self.sleepy+=1
+    if self.happy > 10 
+    else
+      self.happy+=5
+    end  
+
+    if self.sleepy > 10
+    else
+      self.sleepy+=1
+    end  
     self.save
   end
 
 
   def feed 
-    self.hangry-=5
-    self.happy+=5
-    self.thirsty+=2
+    if self.hangry < 1
+    else
+      self.hangry-=5
+    end
+    if self.happy > 10
+    else
+      self.happy+=5
+    end
+    if self.thirsty < 1
+    else  
+      self.thirsty+=2
+    end
     self.save
   end 
 
   def water
-    self.thirsty+=5
-    self.happy+=5
+    if self.thirsty < 1
+    else
+      self.thirsty-=5
+    end
+    if self.happy > 10
+    else
+      self.happy+=5
+    end
     self.save
   end
 
   def naptime
-    self.sleepy-=10
+    if self.sleepy < 1
+    else
+      self.sleepy-=10
+    end
     self.save
   end
 
   def niptime
     self.happy+=10
+    self.sleep-=5
+    if self.thirsty > 10 
+    else
+      self.thirsty += 1
+    end
+    if self.hangry > 10
+    else
+      self.hangry +=1
+    end 
     self.save
   end
-  
-  def pet_sitter
-    status false
-    self.happy == 10
 
-    
+  def self.hour_glass
+    cat = Cat.first
+    cat.hangry -= 2
   end
+
 end
