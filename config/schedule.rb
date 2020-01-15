@@ -1,8 +1,6 @@
 # ENV['RAILS_ENV'] = "development"
 # set :output, "log/cron.log"
-set :output, "log/cron_log.log"
 
-env :PATH, ENV['PATH']
 
 # Use this file to easily define all of your cron jobs.
 #
@@ -25,8 +23,4 @@ env :PATH, ENV['PATH']
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.minute do
-  runner "Cat.hour_glass", :environment => "development"
-
-end
 
