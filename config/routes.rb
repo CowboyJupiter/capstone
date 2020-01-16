@@ -9,10 +9,11 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
 
     post "/cats" => "cats#create"
-    patch "/cats/feed" => "cats#feed"
-    patch "/cats/water" => "cats#water"
-    patch "/cats/niptime" => "cats#niptime"
-    patch "/cats/play" => "cats#play"
+    get "/cats/:id" => "cats#show"
+    patch "/cats/:id/feed" => "cats#feed"
+    patch "/cats/:id/water" => "cats#water"
+    patch "/cats/:id/niptime" => "cats#niptime"
+    patch "/cats/:id/play" => "cats#play"
 
 
 

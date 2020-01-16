@@ -20,7 +20,7 @@ class Api::CatsController < ApplicationController
 
   def show
     the_id = params[:id]
-    @cat = cat.find_by(id: the_id)
+    @cat = Cat.find_by(id: the_id)
     render 'show.json.jb'
   end
 
@@ -46,26 +46,31 @@ class Api::CatsController < ApplicationController
   def feed
     @cat = current_user.cats[0]
     @cat.feed
+    render 'show.json.jb'
   end
 
   def water
     @cat = current_user.cats[0]
     @cat.water
+    render 'show.json.jb'
   end
 
   def niptime
     @cat = current_user.cats[0]
     @cat.niptime
+    render 'show.json.jb'
   end
 
   def play
     @cat = current_user.cats[0]
     @cat.play
+    render 'show.json.jb'
   end
 
   def pet_sitter
     @cat = current_user.cats[0]
     @cat.pet_sitter
+    render 'show.json.jb'
   end
 end
     
