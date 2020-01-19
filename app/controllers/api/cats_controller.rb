@@ -9,10 +9,10 @@ class Api::CatsController < ApplicationController
   def create
     @cat = Cat.new(
       name: params[:name],
-      happy: params[:happy],
-      hangry: params[:hangry],
-      thirsty: params[:thirsty],
-      sleepy: params[:sleepy]
+      happy: 1,
+      hangry: 50,
+      thirsty: 50,
+      litter: 1
     )
     @cat.save
     render 'show.json.jb'
@@ -31,8 +31,6 @@ class Api::CatsController < ApplicationController
     @cat.happy = params[:happy] || @cat.happy
     @cat.hangry = params[:hangry] || @cat.hangry
     @cat.thirsty = params[:thirsty] || @cat.thirsty
-    @cat.sleepy = params[:sleepy] || 
-
     @cat.save
     render 'show.json.jb'
   end

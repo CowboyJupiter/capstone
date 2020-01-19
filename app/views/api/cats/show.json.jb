@@ -3,5 +3,4 @@
   happy: @cat.happy,
   hangry: @cat.hangry,
   thirsty: @cat.thirsty,
-  sleepy: @cat.sleepy
 }
